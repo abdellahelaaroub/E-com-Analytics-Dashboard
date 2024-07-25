@@ -50,20 +50,6 @@ cube(`orders`, {
   },
   
   pre_aggregations: {
-    main: {
-      measures: [
-        orders.count
-      ],
-      dimensions: [
-        users.city,
-        users.gender
-      ],
-      refreshKey: {
-        every: `1 hour`
-      },
-      timeDimension: orders.created_at,
-      granularity: `day`
-    }
     // Pre-aggregation definitions go here.
     // Learn more in the documentation: https://cube.dev/docs/caching/pre-aggregations/getting-started
   }
